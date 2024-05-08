@@ -1,0 +1,115 @@
+/* Mobile-basic */
+.header {
+  border-bottom: 1px solid var(--cornflower);
+}
+
+.header-nav-links,
+.header-address-links {
+  display: none;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  padding: 26px 0;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  .header-nav-links {
+    display: flex;
+    margin-left: 120px;
+    gap: 40px;
+  }
+
+  .header-nav-link {
+    padding: 24px 0;
+    font-weight: 500;
+    display: block;
+    transition-property: color, font-weight;
+    transition: var(--basic-transition);
+  }
+
+  .header-nav-link.current {
+    color: var(--ocean);
+    position: relative;
+  }
+
+  .header-nav-link.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--ocean);
+    border-radius: 2px;
+  }
+
+  .header-address-links {
+    display: flex;
+    margin-left: 120px;
+    flex-direction: column;
+    gap: 12px;
+    padding-right: var(--inner-gap);
+  }
+
+  .header-address-link-email {
+    transition-property: color, font-weight;
+    transition: var(--basic-transition);
+  }
+
+  .header-address-link-phone {
+    transition-property: color, font-weight;
+    transition: var(--basic-transition);
+  }
+
+  .header-address {
+    font-style: normal;
+    margin-left: auto;
+  }
+
+  .header-nav-link:hover,
+  .header-nav-link:focus,
+  .header-address-link-email:hover,
+  .header-address-link-email:focus,
+  .header-address-link-phone:hover,
+  .header-address-link-phone:focus {
+    color: var(--ocean);
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .header-nav-links {
+    display: flex;
+    margin-left: 76px;
+    gap: 40px;
+  }
+
+  .header-address-links {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+/* Global */
+@media not (hover: hover) {
+  .header-nav-link:active,
+  .header-address-link-email:active {
+    color: var(--ocean);
+    font-weight: 500;
+  }
+}

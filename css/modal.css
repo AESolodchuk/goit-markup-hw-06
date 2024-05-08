@@ -1,0 +1,204 @@
+.modal {
+  padding: 24px;
+  padding-top: 72px;
+  border-radius: 4px;
+  width: 408px;
+  min-height: 584px;
+  background-color: var(--modal-backgroud);
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 1px 1px 0 rgba(0, 0, 0, 0.14);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding: 0;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--cornflower);
+  border-radius: 50%;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  color: var(--navy-blue);
+  transition-property: background-color, color, border-color;
+  transition: var(--basic-transition);
+}
+
+.modal-btn:hover {
+  background-color: var(--ocean);
+  color: var(--white);
+  border-color: transparent;
+}
+
+.modal-btn-icon {
+  fill: currentColor;
+}
+
+.modal-caption {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
+  text-align: center;
+}
+
+.modal-form-wrapper {
+  margin-bottom: 8px;
+}
+
+.modal-textarea-wrapper {
+  margin-bottom: 16px;
+}
+
+.modal-form-agreement-description {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: var(--light-slate);
+}
+
+.modal-form-agreement-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 1px solid var(--navy-blue-modal);
+  border-radius: 2px;
+  transition-property: background-color, border-color;
+  transition: var(--basic-transition);
+  fill: transparent;
+}
+
+.modal-form-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light-slate);
+}
+
+.modal-form-input,
+.modal-form-message {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 11px 38px;
+  border: 1px solid var(--navy-blue-modal);
+  border-radius: 4px;
+  outline: transparent;
+  transition-property: border-color;
+  transition: var(--basic-transition);
+}
+
+.modal-form-input:focus,
+.modal-form-message:focus {
+  border-color: var(--iris);
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  transition-property: fill;
+  transition: var(--basic-transition);
+  color: var(--navy-blue);
+}
+
+.modal-form-input:focus + .modal-form-icon {
+  fill: var(--iris);
+}
+
+.modal-form-message {
+  padding: 8px 16px;
+  height: 120px;
+  resize: none;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+}
+
+.modal-form-message::placeholder {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: var(--navy-blue-modal);
+}
+
+.modal-form-field {
+  position: relative;
+}
+
+.modal-form-agreement {
+  margin-bottom: 24px;
+}
+
+.modal-form-agreement-link {
+  line-height: 1.33;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--iris);
+}
+
+.modal-form-agreement-icon {
+  transition-property: fill, background-color, border-color;
+  transition: var(--basic-transition);
+}
+
+.modal-check-input:checked
+  + .modal-form-agreement-description
+  > .modal-form-agreement-checkbox {
+  background-color: var(--ocean);
+  border-color: transparent;
+  fill: var(--cloud);
+}
+
+.modal-form-button {
+  display: block;
+  margin: 0 auto;
+  min-width: 169px;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: transparent;
+  padding: 16px 32px;
+  background-color: var(--iris);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition-property: background-color;
+  transition: var(--basic-transition);
+}
+
+.modal-form-button:hover,
+.modal-form-button:focus {
+  background-color: var(--ocean);
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: var(--navy-blue-modal);
+  transition-property: opacity, visibility;
+  transition: var(--basic-transition);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

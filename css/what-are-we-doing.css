@@ -1,0 +1,28 @@
+/* Mobile-basic */
+.what-are-we-doing {
+  display: none;
+}
+/* Tablet */
+@media screen and (min-width: 768px) {
+}
+
+/* Desktop */
+@media screen and (min-width: 1158px) {
+  .what-are-we-doing {
+    display: block;
+    padding: 0 0 120px 0;
+  }
+
+  .container-what-are-we-doing-header {
+    margin-bottom: 72px;
+  }
+
+  .container-what-are-we-doing {
+    display: flex;
+    gap: var(--outer-gap);
+  }
+
+  .container-what-are-we-doing-list {
+    width: calc((100% - 2 * var(--outer-gap)) / 3);
+  }
+}
