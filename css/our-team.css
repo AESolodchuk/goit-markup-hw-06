@@ -44,12 +44,18 @@
 .container-our-team-link-social-icon:focus {
   background-color: var(--ocean);
 }
+
 /* Tablet */
 @media screen and (min-width: 768px) {
   .container-our-team {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 64px var(--outer-gap);
+  }
+
+  .container-our-team-list {
+    width: calc((100% - var(--outer-gap)) / 2);
+    max-width: 264px;
   }
 }
 

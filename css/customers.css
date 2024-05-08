@@ -16,6 +16,8 @@
 
 .container-customers-list-icons {
   height: 88px;
+  width: calc((100% - var(--inner-gap)) / 2);
+  max-width: 190px;
 }
 
 .container-customers-list-link-icons {
@@ -46,6 +48,16 @@
 @media screen and (min-width: 768px) {
   .container-customers-list {
     gap: calc(3 * var(--outer-gap)) var(--outer-gap);
+  }
+
+  .container-customers-list-icons {
+    height: 88px;
+    width: calc((100% - 2 * var(--outer-gap)) / 3);
+    max-width: 168px;
+  }
+
+  .container-customers-list-link-icons {
+    padding: 16px 32px;
   }
 }
 

@@ -19,7 +19,7 @@
   .header-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .header-nav {
@@ -60,10 +60,8 @@
 
   .header-address-links {
     display: flex;
-    margin-left: 120px;
     flex-direction: column;
     gap: 12px;
-    padding-right: var(--inner-gap);
   }
 
   .header-address-link-email {
@@ -78,7 +76,6 @@
 
   .header-address {
     font-style: normal;
-    margin-left: auto;
   }
 
   .header-nav-link:hover,
@@ -92,6 +89,7 @@
   }
 }
 
+/* Desktop */
 @media screen and (min-width: 1158px) {
   .header-nav-links {
     display: flex;
