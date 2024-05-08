@@ -1,7 +1,7 @@
 /* Mobile-basic */
 .footer {
   background-color: var(--navy-blue);
-  padding: 96px 80px;
+  padding: 96px 0;
 }
 
 .container-footer {
