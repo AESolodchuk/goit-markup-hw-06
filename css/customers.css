@@ -69,6 +69,6 @@
 
   .container-customers-list-icons {
     height: 88px;
-    width: calc((100% - 120px) / 6);
+    width: calc((100% - 5 * var(--outer-gap)) / 6);
   }
 }

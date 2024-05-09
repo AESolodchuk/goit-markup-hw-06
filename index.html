@@ -25,6 +25,7 @@
   </head>
 
   <body>
+    <!--Region Header -->
     <header class="header">
       <div class="container header-container">
         <nav class="header-nav">
@@ -40,7 +41,17 @@
             </li>
             <li><a href="#" class="header-nav-link">Contacts</a></li>
           </ul>
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="menu-toggle-icon" width="32" height="22">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
         </nav>
+
         <address class="header-address">
           <ul class="header-address-links">
             <li>
@@ -61,15 +72,21 @@
     </header>
 
     <main>
+      <!--Region section hero -->
       <section id="hero" class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="hero-button" data-modal-open>
+          <button
+            type="button"
+            class="hero-button"
+            data-modal-open
+            aria-label="open form button"
+          >
             Order Service
           </button>
         </div>
       </section>
-
+      <!--Region section features-->
       <section id="section-features" class="features">
         <div class="container">
           <h2 class="visually-hidden">Features</h2>
@@ -125,7 +142,7 @@
           </ul>
         </div>
       </section>
-
+      <!--Region section what are we doing-->
       <section id="section-what-are-we-doing" class="what-are-we-doing">
         <div class="container">
           <h2 class="container-what-are-we-doing-header">What are we doing</h2>
@@ -133,6 +150,10 @@
             <li class="container-what-are-we-doing-list">
               <img
                 src="./images/index/section_what_we_are_doing/desktop.jpg"
+                srcset="
+                  ./images/index/section_what_we_are_doing/desktop.jpg    1x,
+                  ./images/index/section_what_we_are_doing/desktop@2x.jpg 2x
+                "
                 alt="desktop application image"
                 width="360"
                 height="300"
@@ -141,6 +162,10 @@
             <li class="container-what-are-we-doing-list">
               <img
                 src="./images/index/section_what_we_are_doing/bot.jpg"
+                srcset="
+                  ./images/index/section_what_we_are_doing/bot.jpg    1x,
+                  ./images/index/section_what_we_are_doing/bot@2x.jpg 2x
+                "
                 alt="chat bots image"
                 width="360"
                 height="300"
@@ -149,6 +174,10 @@
             <li class="container-what-are-we-doing-list">
               <img
                 src="./images/index/section_what_we_are_doing/mobile.jpg"
+                srcset="
+                  ./images/index/section_what_we_are_doing/mobile.jpg    1x,
+                  ./images/index/section_what_we_are_doing/mobile@2x.jpg 2x
+                "
                 alt="mobile application image"
                 width="360"
                 height="300"
@@ -157,7 +186,7 @@
           </ul>
         </div>
       </section>
-
+      <!--Region section our team-->
       <section id="section-our-team" class="our-team">
         <div class="container">
           <h2 class="container-our-team-header">Our Team</h2>
@@ -165,9 +194,14 @@
             <li class="container-our-team-list">
               <img
                 src="./images/index/section_our_team/Mark_Guerreo.jpg"
+                srcset="
+                  ./images/index/section_our_team/Mark_Guerreo.jpg    1x,
+                  ./images/index/section_our_team/Mark_Guerreo@2x.jpg 2x
+                "
                 alt="Mark Guerrero profile photo"
                 width="264"
                 height="260"
+                loading="lazy"
               />
               <div class="container-our-team-list-item-text">
                 <h3>Mark Guerrero</h3>
@@ -221,9 +255,14 @@
             <li class="container-our-team-list">
               <img
                 src="./images/index/section_our_team/Tom_Ford.jpg"
+                srcset="
+                  ./images/index/section_our_team/Tom_Ford.jpg    1x,
+                  ./images/index/section_our_team/Tom_Ford@2x.jpg 2x
+                "
                 alt="Tom Ford profile photo"
                 width="264"
                 height="260"
+                loading="lazy"
               />
               <div class="container-our-team-list-item-text">
                 <h3>Tom Ford</h3>
@@ -277,9 +316,14 @@
             <li class="container-our-team-list">
               <img
                 src="./images/index/section_our_team/Gamila_Garcia.jpg"
+                srcset="
+                  ./images/index/section_our_team/Gamila_Garcia.jpg    1x,
+                  ./images/index/section_our_team/Gamila_Garcia@2x.jpg 2x
+                "
                 alt="Camila Garcia profile photo"
                 width="264"
                 height="260"
+                loading="lazy"
               />
               <div class="container-our-team-list-item-text">
                 <h3>Camila Garcia</h3>
@@ -333,9 +377,14 @@
             <li class="container-our-team-list">
               <img
                 src="./images/index/section_our_team/Daniel_Wilson.jpg"
+                srcset="
+                  ./images/index/section_our_team/Daniel_Wilson.jpg    1x,
+                  ./images/index/section_our_team/Daniel_Wilson@2x.jpg 2x
+                "
                 alt="Daniel Wilson profile photo"
                 width="264"
                 height="260"
+                loading="lazy"
               />
               <div class="container-our-team-list-item-text">
                 <h3>Daniel Wilson</h3>
@@ -389,7 +438,7 @@
           </ul>
         </div>
       </section>
-
+      <!--Region section customers-->
       <section id="section-customers" class="customers">
         <div class="container">
           <h2 class="container-customers-header">Customers</h2>
@@ -464,6 +513,7 @@
         </div>
       </section>
     </main>
+    <!--Region footer -->
     <footer class="footer">
       <div class="container container-footer">
         <div class="container-footer-text">
@@ -549,6 +599,7 @@
       </div>
     </footer>
 
+    <!--Region for modal-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-btn" data-modal-close>
@@ -640,6 +691,89 @@
         </form>
       </div>
     </div>
+
+    <!--Region for mobile menu-->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu" aria-label="close menu button">
+        <svg width="8" height="8" class="menu-toogle-icon">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li class="mobile-menu-link">
+          <a href="./index.html" class="link active">Studio</a>
+        </li>
+        <li class="mobile-menu-link">
+          <a href="./portfolio.html" class="link">Portfolio</a>
+        </li>
+        <li class="mobile-menu-link"><a href="#" class="link">Contacts</a></li>
+      </ul>
+
+      <ul class="mobile-contacts">
+        <li class="mobile-contacts-menu-link">
+          <a class="link accent" href="tel:+110001111111"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li class="mobile-contacts-menu-link">
+          <a class="link" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="global-list-social mobile-list-social">
+        <li class="global-list-social-item">
+          <a
+            href="#"
+            class="global-list-social-item-link mobile-link-social-icon"
+          >
+            <svg width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="global-list-social-item">
+          <a
+            href="#"
+            class="global-list-social-item-link mobile-link-social-icon"
+          >
+            <svg width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="global-list-social-item">
+          <a
+            href="#"
+            class="global-list-social-item-link mobile-link-social-icon"
+          >
+            <svg width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="global-list-social-item">
+          <a
+            href="#"
+            class="global-list-social-item-link mobile-link-social-icon"
+          >
+            <svg width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!--Region for js scripts-->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/mobile-menu.js"></script>
     <script src="js/modal.js"></script>
   </body>
 </html>

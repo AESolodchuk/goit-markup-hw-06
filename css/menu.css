@@ -1,0 +1,135 @@
+/* Mobile-basic */
+.menu-toggle-icon {
+  stroke: var(--navy-blue);
+}
+
+.menu-toggle {
+  min-height: 24px;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid var(--cornflower);
+  border-radius: 50%;
+  outline: none;
+
+  transition: var(--basic-transition);
+  transition-property: background-color;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 80px 35px 40px 40px;
+  background-color: var(--white);
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: #fff;
+}
+
+.mobile-menu {
+  margin-bottom: auto;
+}
+
+.mobile-contacts {
+  margin-bottom: 48px;
+}
+
+.mobile-contacts .link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+}
+
+.mobile-contacts-menu-link:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mobile-menu .link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--navy-blue);
+}
+
+.mobile-menu-link:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mobile-menu .link.active {
+  color: var(--ocean);
+}
+
+.mobile-link-social-icon {
+  transition-property: background-color;
+  transition: var(--basic-transition);
+}
+
+.mobile-link-social-icon:hover,
+.mobile-link-social-icon:focus {
+  background-color: var(--ocean);
+}
+
+@media only screen and (max-width: 427px) {
+  .mobile-list-social {
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 428px) {
+  .mobile-contacts .link.accent {
+    font-size: 36px;
+    line-height: 40px;
+    color: var(--iris);
+    text-transform: capitalize;
+  }
+  .mobile-list-social {
+    gap: 56px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Global */
+@media not (hover: hover) {
+  .mobile-link-social-icon:active {
+    background-color: var(--ocean);
+  }
+}

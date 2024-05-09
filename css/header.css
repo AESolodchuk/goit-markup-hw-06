@@ -12,6 +12,7 @@
   display: flex;
   align-items: center;
   padding: 26px 0;
+  justify-content: space-between;
 }
 
 /* Tablet */
@@ -23,8 +24,6 @@
   }
 
   .header-nav {
-    display: flex;
-    align-items: center;
     padding: 0;
   }
 
@@ -92,9 +91,7 @@
 /* Desktop */
 @media screen and (min-width: 1158px) {
   .header-nav-links {
-    display: flex;
     margin-left: 76px;
-    gap: 40px;
   }
 
   .header-address-links {
